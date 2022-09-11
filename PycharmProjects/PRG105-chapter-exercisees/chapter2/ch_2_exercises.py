@@ -94,6 +94,7 @@ print("2 + 2 = " + str(2 + 2))
 
 # 1) Write an equation that divides an integer by an integer, display the equation and the result with a print statement
 print("24 / 3 = " + str(24/3))
+print("24 // 3 = " + str(24//3))
 
 # 2) Write an equation that divides a float by a float, display the equation and the result with a print statement
 print("17.3 / 4.1 = " + str(17.3/4.1))
@@ -134,7 +135,7 @@ print("=" * 10, "Section 2.10 formatting numbers", "=" * 10)
 # example result:
 #               6,548,974,897.57
 number = 6548974897.5687979797
-print(f'{number:,.2f}')
+print(f'{number:30,.2f}')
 
 
 # TODO 2.10 Formatting percentage
