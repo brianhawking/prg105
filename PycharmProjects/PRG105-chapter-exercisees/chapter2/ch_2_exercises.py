@@ -10,45 +10,78 @@
 # TODO 2.3 display string output
 print("=" * 10, "Section 2.3 string output", "=" * 10)
 # Write two lines of code:
-# the first one displays your name
-# the second displays your major
 
+# the first one displays your name
+print("Brian Veitch")
+
+# the second displays your major
+print("Mobile App Design and Development")
 
 # TODO 2.3 using quotes
 print("=" * 10, "Section 2.3 using quotes", "=" * 10)
 # Write a statement that displays:
+
 # The dog says "woof!"
+print('The dog says "woof!"')
 
 
 # TODO 2.5 working with variables and printing their values
 print("=" * 10, "Section 2.5 printing variable values", "=" * 10)
+
 # 1) Declare a variable named age, and set the initial value to your age
+age = 38
+
 # 2) Print the variable value
+print(age)
+
 # 3) Print the word age with a space and the variable value, example: age 25
+print("age", age)
+
 # 4) Assign 42 to the age variable
+age = 42
+
 # 5) Print the word age with a space and the new variable value, example: age 42
+print("age", age)
 
 
 # TODO 2.6 keyboard input
 print("=" * 10, "Section 2.6 keyboard input", "=" * 10)
+
 # 1) Use an input statement to ask the user to enter their name; assign the result to a variable called name
+name = input("What is your name? ")
+
 # 2) Print a line that uses the variable to greets the user by name. Example: Hello, Meri
+print("Hello", name, ". It's nice to meet you!")
 
 
 # TODO 2.6 - 2.7 numeric input, performing calculations
 print("=" * 10, "Section 2.6-2.7 numeric input and calculations", "=" * 10)
+
 # 1) Get the user to enter their age; store it as an integer. Use int() to convert the string to an integer.
+age = int(input("What is your age? "))
+
 # 2) Print the age in a sentence using a comma in the print statement to separate items
 #    (when using a comma in a print statement, you can mix numbers and strings)
 #    example: "This year you are ", age
+print("This year you are", age)
+
 # 3) Add 1 to the age: age = age + 1
+age += 1
+
 # 4) Print the result using the age in a full sentence
+print("You will be", age, "next year.")
 
 
 # TODO 2.7 performing calculations
 print("=" * 10, "Section 2.7 performing calculations", "=" * 10)
+
 # 1) Calculate 7 divided by 2; print the equation and the result
+value = 7/2
+print("7 / 2 = ", value)
+
 # 2) Calculate the remainder of 7 divided by 2 using the modulus operator; print the equation and the result
+mod = 7 % 2
+print("7 mod 2 is ", mod)
 
 
 # TODO 2.7 data conversion
@@ -60,16 +93,21 @@ print("=" * 10, "Section 2.7 data conversion", "=" * 10)
 print("2 + 2 = " + str(2 + 2))
 
 # 1) Write an equation that divides an integer by an integer, display the equation and the result with a print statement
+print("24 / 3 = " + str(24/3))
 
 # 2) Write an equation that divides a float by a float, display the equation and the result with a print statement
+print("17.3 / 4.1 = " + str(17.3/4.1))
 
 # 3) Write an equation that divides a float by an integer, display the equation and the result with a print statement
-
+print("18.6 / 5 = " + str(18.6/5))
 
 # TODO 2.8 Concatenating strings (Displaying Multiple Items with the + Operator)
 print("=" * 10, "Section 2.8 concatenating strings", "=" * 10)
 # 1) Have the user enter their name using an input statement
+name = input("Please enter your name? ")
+
 # 2) Greet the user using a print statement; concatenate "Hello" and their name into one string
+print("Hi " + name + ". Nice to meet you.")
 
 
 # TODO 2.9 Using print statement options
@@ -77,14 +115,14 @@ print("=" * 10, "Section 2.9 print statement options", "=" * 10)
 # Modify the following code to display on one line, WITHOUT merging the lines of code.
 # The words should be separated by a hyphen. The result should look like this: one-two-three
 # DO NOT MERGE INTO ONE LINE OF CODE, use print statement options to get the desired result.
-print('one', end=' ')
-print('two', end=' ')
+print('one', end='-')
+print('two', end='-')
 print('three')
 
 # TODO 2.9 Using escape codes
 print("=" * 10, "Section 2.9 escape codes", "=" * 10)
 # Modify the following line of code to add tabs between the days of the week
-print("Sunday Monday Tuesday Wednesday Thursday Friday Saturday")
+print("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", sep="\t")
 
 
 # TODO 2.10 Formatting numbers
@@ -96,7 +134,7 @@ print("=" * 10, "Section 2.10 formatting numbers", "=" * 10)
 # example result:
 #               6,548,974,897.57
 number = 6548974897.5687979797
-print(f'{number}')
+print(f'{number:,.2f}')
 
 
 # TODO 2.10 Formatting percentage
@@ -104,7 +142,7 @@ print("=" * 10, "Section 2.10 formatting a percentage", "=" * 10)
 # Print the variable percentage using a percentage format with a precision of 2
 # example result: 76.54%
 percentage = .7654
-print()
+print(f'{percentage:.2%}')
 
 
 # TODO 2.11 Named Constants
@@ -113,6 +151,6 @@ print("=" * 10, "Section 2.11 Named Constants", "=" * 10)
 TAX_RATE = 0.09
 amount = 34.12
 # Complete the following: multiply the amount by the named constant
-tax_owed = amount
+tax_owed = amount * TAX_RATE
 # Complete the following to display the result using a currency format (2 decimal places)
-print(f"Tax: ${tax_owed}")
+print(f"Tax: ${tax_owed:.2f}")
