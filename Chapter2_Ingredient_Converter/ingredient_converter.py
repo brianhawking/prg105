@@ -1,3 +1,9 @@
+"""
+Find a simple recipe online. Display the ingredients with amounts and list the servings that will be
+made with the recipe. Ask the user to enter how many servings they would like to make, and display
+the required amount of ingredients they will need. Format to one decimal place.
+"""
+
 # Ingredients for Chocolate Chip Cookies
 
 BUTTER = 1
@@ -21,7 +27,7 @@ number_of_servings = int(input("Please enter the number of servings you want of 
 # Multiply ingredients by this number to adjust the ingredients
 scaling_factor = number_of_servings / 24
 
-# Output 
+# Output
 print(f"For {number_of_servings} servings of chocolate chip cookies, you will need:")
 print(f"{(BUTTER * scaling_factor):.1f} cups of butter")
 print(f"{(SUGAR * scaling_factor):.1f} cups of sugar")
