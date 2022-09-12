@@ -22,7 +22,7 @@ CHOPPED_WALNUTS = 1
 SERVINGS = 24
 
 # Get the required servings from the user
-number_of_servings = int(input("Please enter the number of servings you want of these chocolate chip cookies: "))
+number_of_servings = float(input("Please enter the number of servings you want of these chocolate chip cookies: "))
 
 # Multiply ingredients by this number to adjust the ingredients
 scaling_factor = number_of_servings / 24
