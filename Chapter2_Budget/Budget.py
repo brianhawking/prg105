@@ -16,7 +16,7 @@ The program should also tell the user how much money they have left after subtra
 
 print(f"Please enter your monthly expenses to determine their monthly percentages.\n")
 
-# Get user information
+# Get user's monthly income and monthly expenses
 
 monthly_income = float(input("How much is your total monthly income? "))
 housing_expense = float(input("How much do you spend on housing (rent/mortgage) each month? "))
