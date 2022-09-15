@@ -1,6 +1,6 @@
 """
     Starting Out with Python by Tony Gaddis, fifth edition
-    Complete all of the TODO directions
+    Complete all the TODO directions
     The number next to the TODO represents the chapter
     and section in your textbook that explain the required code
     Your file should compile error free (green checkmark upper right)
