@@ -31,10 +31,13 @@ c = 5
 print(a > 3)
 
 # 2
+print(a == b)
 
 # 3
+print(a != b)
 
 # 4
+print(a <= b)
 
 # TODO 3.2 the if else statement
 print("=" * 10, "Section 3.2 if-else", "=" * 10)
@@ -42,7 +45,12 @@ print("=" * 10, "Section 3.2 if-else", "=" * 10)
 # Depending on the answer, display the appropriate statement:
 #    "You are old enough to vote" or "You are not old enough to vote"
 # Use the if-else structure (remember to use proper indentation)
+
 age = int(input("How old are you? "))
+if age >= 18:
+    print("You are old enough to vote")
+else:
+    print("You are not old enough to vote")
 
 # TODO 3.3 comparing strings
 print("=" * 10, "Section 3.3 comparing strings", "=" * 10)
@@ -51,12 +59,31 @@ print("=" * 10, "Section 3.3 comparing strings", "=" * 10)
 password = "narwhals"
 user_password = input("Please enter the password:  ")
 
+if user_password == password:
+    print("That is correct")
+else:
+    print("That is not correct")
+
 # TODO 3.4 if - elif - else
 print("=" * 10, "Section 3.4 if-elif-else", "=" * 10)
 # Complete the code to accept a number between 1 and 5 from the user
 # and display a roman numeral for that number. If the number entered is
 # not between 1 and 5, have the else statement display "That is not a valid number"
 number = int(input("Please enter a number between 1 and 5: "))
+
+if number == 1:
+    print(f"{number} -> I")
+elif number == 2:
+    print(f"{number} -> II")
+elif number == 3:
+    print(f"{number} -> III")
+elif number == 4:
+    print(f"{number} -> IV")
+elif number == 5:
+    print(f"{number} -> V")
+else:
+    print("That is not a valid number")
+
 
 # TODO 3.4 a series of conditions
 print("=" * 10, "Section 3.4 multiple conditions", "=" * 10)
@@ -73,10 +100,19 @@ customer_age = int(input("How old is the customer?   "))
 cost = 0  # initializing cost, assign the correct price to this variable
 # Write the code here to determine the correct cost based on age
 
+if customer_age >= 62:
+    cost = 9.89
+elif customer_age >= 12:
+    cost = 12.89
+elif customer_age < 3:
+    cost = 0
+else:
+    cost = customer_age * 0.99
 
 # Output, correctly formatted -- leave this code to display the result
 print("Your cost for a customer who is", customer_age, "years old ", end="")
 print(f"will be ${cost: ,.2f}")
+
 
 # TODO 3.5 Logical Operators
 print("=" * 10, "Section 3.5 logical operators", "=" * 10)
@@ -89,6 +125,10 @@ d = 10
 e = 10
 f = 12
 
+print(d == e and e < f)
+print(d > f or e < f)
+print(not (e == f))
+
 
 # TODO 3.6 Boolean variables
 print("=" * 10, "Section 3.6 boolean variables", "=" * 10)
@@ -97,3 +137,13 @@ print("=" * 10, "Section 3.6 boolean variables", "=" * 10)
 # on the tired value. Then print "Crying" or "quiet" depending on the hungry variable
 tired = True
 hungry = False
+
+if tired:
+    print("Eyes closed")
+else:
+    print("Eyes open")
+
+if hungry:
+    print("Crying")
+else:
+    print("quiet")
