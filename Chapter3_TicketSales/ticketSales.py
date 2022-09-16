@@ -60,4 +60,3 @@ price_per_ticket = cost_after_discount / num_of_tickets
 print(f"\nCost before any discounts are applied: ${cost_before_discount:.2f}")
 print(f"Your cost after all discounts are applied: ${cost_after_discount:.2f}")
 print(f"Your price is ${price_per_ticket:.2f} per ticket.")
-
