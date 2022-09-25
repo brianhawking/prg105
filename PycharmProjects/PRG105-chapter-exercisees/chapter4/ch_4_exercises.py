@@ -51,7 +51,7 @@ print("=" * 10, "Section 4.3 using the control variable in a for loop", "=" * 10
 # 2) Inside the loop, print the result of number times 7
 
 for number in range(1, 10):
-    print(number * 7)
+    print(f"{number} times 7 is {number * 7}")
 
 # TODO 4.4 a running total
 print("=" * 10, "Section 4.4 running total", "=" * 10)
