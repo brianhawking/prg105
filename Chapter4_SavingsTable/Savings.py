@@ -21,6 +21,7 @@ totalSavings = float(input("How much money do you currently have in savings? "))
 
 print("\nThis projection assumes a 3% raise each year and a 6% yearly return on investment.")
 
+# Set up table headers with spacing
 print("{:>8} {:>12} {:>24} {:>20}".format('Year', 'Income', 'Savings Contribution', 'Total Savings'))
 for year in range(1, ageToRetire - age + 1):
 
@@ -28,6 +29,7 @@ for year in range(1, ageToRetire - age + 1):
     contribution = currentIncome * savingsPercent / 100
     totalSavings = (totalSavings * (1+ROI)) + contribution
 
+    # Match table spacing with headers above
     print("{:>8} {:>12} {:>24} {:>20}".format(
         f"{year}",
         f"{currentIncome:,.0f}",
