@@ -1,5 +1,3 @@
-import random
-import math
 
 """
     Starting Out with Python by Tony Gaddis, fifth edition
@@ -9,6 +7,9 @@ import math
     Your file should compile error free (green checkmark upper right)
     Submit your completed file
 """
+
+import random
+import math
 
 # TODO 5.2 - calling an existing function
 print("=" * 10, "Section 5.2 call an existing function", "=" * 10)
@@ -49,19 +50,10 @@ print("=" * 10, "Section 5.3 design a program using functions", "=" * 10)
 
 
 def main():
-    input("Press enter to see each part of the knock knock joke. Ready? Press enter.")
     knockknock()
-
-    input()
     whosThere()
-
-    input()
     answer()
-
-    input()
     answerWho()
-
-    input()
     punchline()
 
 
@@ -216,7 +208,7 @@ number_to_round = 4.243
 
 def printCeiling(number):
     ceiling = math.ceil(number)
-    print(f"{ceiling}")
+    print(f"The ceiling for {number} is {ceiling}")
 
 
 printCeiling(number_to_round)
