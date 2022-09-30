@@ -70,7 +70,7 @@ print("=" * 10, "Section 6.2 use loops to process files", "=" * 10)
 states_file = open('states.txt', 'r')
 counter = 0
 
-# 2) Write a for loop to read in all of the lines,
+# 2) Write a for loop to read all the lines,
 # -- print each line on the screen,
 # -- also add 1 to counter for each line
 
@@ -138,4 +138,4 @@ try:
     superheros = superheros_file.read()
     superheros_file.close()
 except IOError:
-    print("The file", superheros_file, "does not exist")
+    print("The file does not exist")
