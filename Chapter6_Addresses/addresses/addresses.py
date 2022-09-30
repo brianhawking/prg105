@@ -18,6 +18,8 @@ def main():
         record = getRecord()
         address_book.write(record)
 
+    address_book.close()
+
 
 def getRecord():
     name = input("What is the name of the person? ")
