@@ -11,13 +11,18 @@
 print("=" * 10, "Section 6.1 file input and output", "=" * 10)
 # 1) Assign the variable file_variable to open states.txt in read mode
 
+file_variable = open('states.txt', 'r')
 
 # 2) Close the file
+
+file_variable.close()
 
 
 # 3) Assign the variable state_capitals to open capitals.txt in write mode.
 #    Please note, the file does not currently exist, and by opening it in
 #    write mode you will create it
+
+state_capitals = open('capitals.txt', 'a')
 
 
 # 4) Write three state capitals to the file with each capital and state pair on a separate line
@@ -25,22 +30,33 @@ print("=" * 10, "Section 6.1 file input and output", "=" * 10)
 # Sample:
 #   state_capitals.write("Alabama, Montgomery\n") - make sure to include the \n as a new line symbol
 
+state_capitals.write('Illinois, Springfield\n')
+state_capitals.write('Arkansas, Little Rock\n')
+state_capitals.write('Richmond, Virginia\n')
 
 # 5) Close the file
 
+state_capitals.close()
 
 # TODO 6.1 reading data in from a file
 print("=" * 10, "Section 6.1 reading data from a file", "=" * 10)
 # 1) Assign the variable states_data to open states.txt in read mode
 
+states_data = open('states.txt', 'r')
+
 # 2) Read in three lines from the file, assign one line to each variable below, Remove """   """ to test
-"""
-line1 =
-line2 =
-line3 =
-"""
+
+line1 = states_data.readline()
+line2 = states_data.readline()
+line3 = states_data.readline()
+
+print(line1)
+print(line2)
+print(line3)
  
 # 3) Close the file
+
+states_data.close()
 
 # 4) Print the three variables
 
@@ -48,16 +64,36 @@ line3 =
 print("=" * 10, "Section 6.2 use loops to process files", "=" * 10)
 # Complete the program below to Read in and Count all entries in the states file
 # Remove the """ """ before testing
+
 # 1) Open the file in read mode using states_file as the file variable
-"""
-states_file =
+
+states_file = open('states.txt', 'r')
 counter = 0
-"""
+
 # 2) Write a for loop to read in all of the lines,
 # -- print each line on the screen,
 # -- also add 1 to counter for each line
 
+for i in range(1, 51):
+    print(states_file.readline().rstrip('\n'))
+    counter += 1
+
 # 3) Close the file
+
+states_file.close()
+
+# Using a while loop
+states_file = open('states.txt', 'r')
+counter = 0
+
+stateLine = states_file.readline()
+
+while stateLine != '':
+    print(stateLine.rstrip('\n'))
+    counter += 1
+    stateLine = states_file.readline()
+
+states_file.close()
 
 # TODO 6.3 Processing records
 print("=" * 10, "Section 6.3 processing records", "=" * 10)
@@ -66,14 +102,23 @@ books = 3      # use this as the number of books to enter
 
 # 1) open the file books.txt for writing, using the variable books_file
 # Remove the """ """ to test
-"""books_file = """
+
+books_file = open('books.txt', 'w')
 
 # 2) Use a for loop to get a title and author from the user using a range of 1, books + 1
 # -- get the data from the user in the loop
 # -- write the data to the file as a record while in the loop,
 #    make sure to include the \n at the end of the line
+
+for book in range(1, books + 1):
+    title = input("Enter the book's title: ")
+    author = input("Enter the book's author: ")
+    record = f"{title}, {author}\n"
+    books_file.write(record)
     
 # 3) Close the file
+
+books_file.close()
 
 # TODO 6.4 Exceptions
 print("=" * 10, "Section 6.4 exceptions", "=" * 10)
@@ -87,3 +132,10 @@ print("=" * 10, "Section 6.4 exceptions", "=" * 10)
 # 3) Close the file
 
 # 4) Create an except IOError, that uses a print statement to tell the user that the file doesn't exist
+
+try:
+    superheros_file = open('superheros.txt', 'r')
+    superheros = superheros_file.read()
+    superheros_file.close()
+except IOError:
+    print("The file", superheros_file, "does not exist")
