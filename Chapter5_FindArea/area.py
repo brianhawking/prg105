@@ -23,6 +23,7 @@ import math
 pi = math.pi
 
 
+# This is the start of the program
 def main():
     selection = displayMenu()
     while selection != "5":
@@ -36,6 +37,8 @@ def main():
     print("\nThank you for playing")
 
 
+# Display the menu options to user. Continue displaying until
+# they choose a valid option (1,2,3,4,5)
 def displayMenu():
     options = ["Rectangle", "Triangle", "Square", "Circle", "Quit"]
     print("This program will find the area of a shape for you.")
@@ -47,6 +50,7 @@ def displayMenu():
 
 
 # Validate functions =====================================
+# Checks user's selection against the valid choices (1,2,3,4,5)
 def validateSelection(selection):
     valid_choices = ["1", "2", "3", "4", "5"]
     for i in valid_choices:
@@ -55,6 +59,7 @@ def validateSelection(selection):
     return False
 
 
+# Checks if the user entered a positive number. Returns a valid positive number
 def validatePositive(number):
     while number <= 0:
         number = float(input(f"{number} is not positive. Try again: "))
