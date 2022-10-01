@@ -10,14 +10,18 @@ At the end, display the total, count and average of the values.
 
 
 def main():
+
     # Open file
     file = open('numeric_data.txt', 'r')
 
+    # Initialize variables
     counter = 0
     total = 0
 
+    # Read in first line from file
     line = file.readline().rstrip('\n')
 
+    # Loop through file until you reach the end of the file
     while line != '':
         counter += 1
         line = float(line.replace(',', ''))
@@ -26,6 +30,7 @@ def main():
         # Get next line
         line = file.readline().rstrip('\n')
 
+    # Format a table to dispaly results
     print("{:<18} {:>12}".format(
         "Total:",
         f"{total:,.2f}"
