@@ -17,18 +17,12 @@ def main():
     counter = 0
     total = 0
 
-    # Read in first line from file
-    line = file.readline().rstrip('\n')
-
-    # Loop through file until you reach the end of the file
-    while line != '':
+    # Loop through file
+    for line in file:
+        amount = float(line.replace(',', ''))
+        print(f"{amount:,.2f}")
         counter += 1
-        line = float(line.replace(',', ''))
-        print(f"{line:,.2f}")
-        total += line
-
-        # Get next line
-        line = file.readline().rstrip('\n')
+        total += amount
 
     file.close()
 

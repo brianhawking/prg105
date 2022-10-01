@@ -17,7 +17,6 @@ Total and average the remaining good data and display results.
 
 
 def main():
-
     print("This program will total and average numbers in your data file.")
     file_name = input("Enter the name of your data file: ")
 
@@ -27,23 +26,24 @@ def main():
         analyze(file)
         file.close()
 
-    except Exception as error:
+    except:
         print("Unable to access file:", file_name)
 
 
 def analyze(file):
-
     # Initialize variables
     counter = 0
     total = 0
 
     # Read in first line from file
+
     line = file.readline().rstrip('\n')
 
     # Loop through file until you reach the end of the file
     while line != '':
         counter += 1
         line = float(line.replace(',', ''))
+        print(f"{line:,.2f}")
         total += line
 
         # Get next line
@@ -62,6 +62,7 @@ def analyze(file):
         "Average:",
         f"{(total / counter):,.2f}"
     ))
+
 
 # ======== Start program ===============
 main()
