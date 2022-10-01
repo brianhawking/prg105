@@ -10,7 +10,6 @@ At the end, display the total, count and average of the values.
 
 
 def main():
-
     # Open file
     file = open('numeric_data.txt', 'r')
 
@@ -30,7 +29,7 @@ def main():
         # Get next line
         line = file.readline().rstrip('\n')
 
-    # Format a table to dispaly results
+    # Format a table to display results
     print("{:<18} {:>12}".format(
         "Total:",
         f"{total:,.2f}"
@@ -43,6 +42,7 @@ def main():
         "Average:",
         f"{(total / counter):,.2f}"
     ))
+
 
 # ======== Start program ===============
 main()
