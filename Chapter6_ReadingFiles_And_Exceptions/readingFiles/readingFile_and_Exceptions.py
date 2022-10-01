@@ -1,15 +1,31 @@
 """
-For this assignment, you will be providing the logic (plan) for the
-following program:
+Use Practice 2 Program - Reading Files as a start. Modify the program to
+do the following:
 
-Write a program that will read numeric data from a text file line
-by line using a loop. Strip the newline and convert each value to a
-float, then display it. Use variables to count and total the entries.
-At the end, display the total, count and average of the values.
+Request the data file name from the user.
+
+Use a try-except statement to detect errors when opening the file.
+Report any errors to the screen.
+
+Download the file sales_error-1.txtDownload sales_error-1.txt to use as
+an input file.
+
+Use try-except to detect bad data in the input file. Report it to the
+screen and skip over bad values.
+Total and average the remaining good data and display results.
 """
 
 
 def main():
+
+    print("This program will total and average numbers in your data file.")
+    file_name = input("Enter the name of your data file: ")
+
+    # try to open file
+    try:
+        file = open(file, 'r')
+
+
     # Open file
     file = open('numeric_data.txt', 'r')
 
@@ -29,8 +45,6 @@ def main():
         # Get next line
         line = file.readline().rstrip('\n')
 
-    file.close()
-    
     # Format a table to display results
     print("{:<18} {:>12}".format(
         "Total:",
