@@ -24,13 +24,14 @@ def main():
     while line != '':
         counter += 1
         line = float(line.replace(',', ''))
+        print(f"{line:,.2f}")
         total += line
 
         # Get next line
         line = file.readline().rstrip('\n')
 
     file.close()
-    
+
     # Format a table to display results
     print("{:<18} {:>12}".format(
         "Total:",

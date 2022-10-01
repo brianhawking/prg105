@@ -23,11 +23,15 @@ def main():
 
     # try to open file
     try:
-        file = open(file, 'r')
+        file = open(file_name, 'r')
+        analyze(file)
+        file.close()
+
+    except Exception as error:
+        print("Unable to access file:", file_name)
 
 
-    # Open file
-    file = open('numeric_data.txt', 'r')
+def analyze(file):
 
     # Initialize variables
     counter = 0
@@ -58,7 +62,6 @@ def main():
         "Average:",
         f"{(total / counter):,.2f}"
     ))
-
 
 # ======== Start program ===============
 main()
