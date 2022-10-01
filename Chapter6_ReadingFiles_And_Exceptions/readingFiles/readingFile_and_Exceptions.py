@@ -26,7 +26,7 @@ def main():
         analyze(file)
         file.close()
 
-    except:
+    except Exception:
         print("Unable to access file:", file_name)
 
 
@@ -35,19 +35,16 @@ def analyze(file):
     counter = 0
     total = 0
 
-    # Read in first line from file
+    # Loop through file
+    for line in file:
+        try:
+            amount = float(line.rstrip('\n'))
+            print(f"{amount:,.2f}")
+            counter += 1
+            total += amount
 
-    line = file.readline().rstrip('\n')
-
-    # Loop through file until you reach the end of the file
-    while line != '':
-        counter += 1
-        line = float(line.replace(',', ''))
-        print(f"{line:,.2f}")
-        total += line
-
-        # Get next line
-        line = file.readline().rstrip('\n')
+        except Exception:
+            print(f"Line {counter + 1} with a value of {line} was invalid.")
 
     # Format a table to display results
     print("{:<18} {:>12}".format(

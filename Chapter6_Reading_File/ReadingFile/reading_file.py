@@ -19,7 +19,7 @@ def main():
 
     # Loop through file
     for line in file:
-        amount = float(line.replace(',', ''))
+        amount = float(line.replace(',', '').rstrip('\n'))
         print(f"{amount:,.2f}")
         counter += 1
         total += amount
