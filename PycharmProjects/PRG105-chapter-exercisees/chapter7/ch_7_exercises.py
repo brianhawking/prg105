@@ -56,7 +56,7 @@ print("=" * 10, "Section 7.4 using the in operator", "=" * 10)
 # Use the in operator to determine whether "Tue" is in the list days
 # Based on the result, display "yes, Tue is in the list" or "no, Tue is not in the list"
 
-if "Tuesday" in days:
+if "Tue" in days:
     print("Yes, 'Tuesday' is in the list")
 else:
     print("No, 'Tuesday' is NOT in the list")
@@ -162,9 +162,7 @@ days_in_month = [
 
 # 2) Print the contents of the entire list
 
-for row in days_in_month:
-    for element in row:
-        print(element)
+print(days_in_month)
 
 # 3) Print just the values for index 3,0 and 3,1
 
