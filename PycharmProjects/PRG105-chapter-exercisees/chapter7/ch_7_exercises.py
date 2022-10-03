@@ -127,6 +127,7 @@ states_list = []
 file = open('states.txt', 'r')
 for state in file:
     states_list.append(state.rstrip('\n'))
+file.close()
 print(states_list)
 
 
