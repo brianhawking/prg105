@@ -9,6 +9,7 @@ values.
 
 
 def main():
+    # Start loop to get a valid positive integer
     try:
         num_of_students = int(input("How many students do you need to enter grades for? "))
         grades_array = getInformation(num_of_students)
@@ -18,6 +19,7 @@ def main():
         main()
 
 
+# Copies contents of 2D array to text file
 def copyToFile(grades):
     try:
         file = open('grades.txt', 'w')
@@ -28,6 +30,7 @@ def copyToFile(grades):
         print("There was an issue opening the grades file")
 
 
+# Continue asking user for student name and grade
 def getInformation(num):
     grades_array = []
     for i in range(0, num):
