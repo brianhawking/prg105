@@ -11,7 +11,7 @@ def main():
     try:
         file = open('rainfall-totals.txt', 'r')
         for line in file:
-            components = line.split()
+            components = line.rstrip('\n').split()
             try:
                 total += float(components[1])
                 count += 1
