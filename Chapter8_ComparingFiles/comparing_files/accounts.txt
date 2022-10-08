@@ -1,0 +1,21 @@
+A236, Acme Inc,  600 Vintage Way, Crystal Lake, IL, 60014
+04U5, Midway Power, 200 First St, Carry, IL, 60013
+JO83, Rubble Junk, 23 Pingree, Crystal Lake, IL, 60014
+0F83, McHenry County College, 8900, Route 14, Crystal Lake, IL 60014
+LKSI, Dollar Deals, 284 Rt. 14, Harvard, IL, 60033
+LS82, Dollar Deals, 234 Main Street, Fox River Grove, IL, 60021
+JSB2, Dollar Deals, 22 Sycamore, Sleepy Hollow, IL 60018
+R327, Roxy Wheels, 28 Main Street, Dundee, IL 60016
+0U2E, Crafty Paint and Paper, 97 Mockingbird Ln., Ringwood, IL 60072
+890N, Suds Bar and Grill, 28 Ring Road, Spring Grove, IL, 60081
+0234, Sunny Side Up Cafe, 72 State St., Union, IL, 60180
+0SHN, Thirsty Juice Bar, 26 Willow St, Woodstock, IL, 60098
+Q073, Second Time Around, 33 Locust st, Wonder Lake, IL, 60097
+OIDN, Page Turner Used Books, 342 Main St, Richmond, IL, 60071
+OS63, Sudsy Dogs Grooming, 23 Route 31, Algonquin, IL 60102
+OISD, On The Road Again, 932 Willow St., Huntley, 60142
+LSJN, Shady Pines, 32 Roosevelt Rd, McHenry, IL, 60050
+OSEI, Lots O Latte, 23 2nd St, Algonquin, IL 60102
+M038, Bug Away, 2103 North HWY 31, Richmond, IL, 60071
+AOIN, Sparkling Cleaners, 10 S. Seventh Street, Union, IL 60180
+BN28, Road Runner, 13 South Main, Fox River Grove, 60021
