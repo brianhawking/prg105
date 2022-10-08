@@ -17,7 +17,7 @@ Convert the coded message back into English and display the message on the scree
 can be concatenated to a string as you decode)
 """
 
-# Global
+# Global Constants
 alpha = ["a", "A", "b", "B", "c", "C", "d", "D", "e", "E", "f", "F", "g", "G", "h", "H", "i", "I",
          "j", "J", "k", "K", "l", "L", "m", "M", "n", "N", "o", "O", "p", "P", "q", "Q", "r", "R",
          "s", "S", "t", "T", "u", "U", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z", " ", ".",
@@ -28,7 +28,8 @@ code = ["F", "W", "a", "b", "q", "Q", "C", "w", "D", "e", "R", "f", "S", "", "G"
         "I", "s", "H", "t", "T", "P", "U", "v", "V", "m", "A", "x", "N", "y", "Y", "z", "Z", " ",
         ".", ","]
 
-
+# Receive file name from user, read lines in from file, convert them from a coded character to
+# to an alpha (decoded) character
 def main():
     print("This program will decode a coded text file.")
     file_name = input("What is the name of the file to decode? ")
@@ -41,6 +42,7 @@ def main():
         file.close()
         print(decoded_message)
 
+    # File either didn't exist or failed to open
     except Exception:
         print(f"There was a problem with {file_name}. Try again.\n")
         main()
