@@ -39,16 +39,15 @@ def main():
     message = input("Enter a phrase to encode: ")
     encoded_message = encode(message)
     print(encoded_message)
-    print_to_file(encoded_message)
+    # print_to_file(encoded_message)
 
 
 # Loop through message, match character in alpha array and match it to the encoded array
 def encode(message):
     encoded_message = []
     for char in message:
-        for i in range(0, len(alpha)):
-            if char == alpha[i]:
-                encoded_message.append(code[i])
+        index = alpha.index(char)
+        encoded_message.append(code[index])
     return encoded_message
 
 
