@@ -34,6 +34,8 @@ code = ["F", "W", "a", "b", "q", "Q", "C", "w", "D", "e", "R", "f", "S", "", "G"
 
 # Main function - get user's phrase
 def main():
+    print("This program take in your secret message and convert it by substituting the letters with corresponding encoded characters.")
+    print("It will display the encoded characters as well as write them to encode.txt file")
     message = input("Enter a phrase to encode: ")
     encoded_message = encode(message)
     print(encoded_message)
