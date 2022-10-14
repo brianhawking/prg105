@@ -10,9 +10,16 @@ the minimum and maximum values.
 
 
 def main():
+    # Initialize days of week
     days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+    # Initialize empty steps dictionary
     steps = {}
+
+    # Initialize total_steps to track the accumulation of steps
     total_steps = 0
+
+    # Loop through days to get user's steps
     for day in days:
         value = int(input(f"Please enter the number of steps taken on {day}: "))
         steps[day] = value
@@ -25,6 +32,8 @@ def main():
     days_of_minimum = set()
     maximum_steps = max(steps.values())
     days_of_maximum = set()
+
+    # Loop through to find which days had max or min steps
     for key, value in steps.items():
         if value == minimum_steps:
             days_of_minimum.add(key)
