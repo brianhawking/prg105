@@ -14,6 +14,7 @@ print("=" * 10, "Section 9.1 dictionaries", "=" * 10)
 # 1) Finish creating the following dictionary by adding three more people and birthdays
 birthdays = {'Meri': 'May 16', 'Kathy': 'July 14', 'Brian': 'October 25', 'Connor': 'March 11', 'Casey': 'April 28'}
 
+
 # 2) Use the key to retrieve and print Meri's Birthday
 
 print(f"Meri's birthday is {birthdays['Meri']}")
@@ -29,7 +30,7 @@ miles_ridden = {'June 1': 25, 'June 2': 20, 'June 3': 38, 'June 4': 12, 'June 5'
 # 1) Print the keys and the values of miles_ridden using a for loop
 
 for key in miles_ridden:
-    print(key, miles_ridden[key])
+    print(f"Rode {miles_ridden[key]} miles on {key}")
 
 # 2) Use the get() method to get the value for June 3 (replace the "")
 #    if not found, the result should be 'Entry not found'
@@ -43,11 +44,13 @@ print(value2)
 
 # 4) Use the values method to print all values in the miles_ridden dictionary
 
+print(miles_ridden.values())
 for value in miles_ridden.values():
     print(value)
 
 # 5) Use the keys method to print all keys in miles_ridden
 
+print(miles_ridden.keys())
 for key in miles_ridden.keys():
     print(key)
 print()
