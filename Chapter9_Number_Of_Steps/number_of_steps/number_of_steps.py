@@ -42,5 +42,3 @@ def main():
 
 # ===== START PROGRAM ===============
 main()
-
-
