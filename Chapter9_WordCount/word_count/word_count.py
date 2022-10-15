@@ -24,7 +24,7 @@ def main():
 
         file.close()
 
-        # Print only keys whose value is 1 (i.e., unqiue word)
+        # Print only keys whose value is 1 (i.e., unique word)
         for key, value in words.items():
             if value == 1:
                 print(key)
