@@ -7,6 +7,8 @@ ask for the number in English. Score the test and give the user a letter grade.
 
 
 def main():
+
+    # Initialize German - English translations
     language_translations = {
         'eins': 'one',
         'zwei': 'two',
@@ -20,6 +22,7 @@ def main():
         'zehn': 'ten'
     }
 
+    # Set up letter grades
     grades = {
         '10': 'A',
         '9': 'A',
@@ -33,6 +36,7 @@ def main():
 
     print("Enter the number in English which corresponds to the number in German.")
 
+    # Loop through dictionary, asking user to translate
     for key, value in language_translations.items():
         answer = input(f"What is the equivalent of {key}: ")
         if answer == value:
@@ -41,6 +45,7 @@ def main():
         else:
             print(f"Incorrect. The correct answer is {value}")
 
+    # Display results
     print(f"Your final score is {score}/{len(language_translations)}")
     print(f"{grades.get(str(score), 'F')}")
 
