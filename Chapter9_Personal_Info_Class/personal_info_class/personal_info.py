@@ -9,41 +9,51 @@ for clarity and ease of reading.
 
 
 class PersonalInfo:
-    def __init__(self):
-        self.name = None
-        self.address = None
-        self.age = None
-        self.phone = None
+    def __init__(self, name, address, age, phone):
+        self.__name = name
+        self.__address = address
+        self.__age = age
+        self.__phone = phone
 
     def set_name(self, name):
-        self.name = name
+        self.__name = name
 
     def set_address(self, address):
-        self.address = address
+        self.__address = address
 
     def set_age(self, age):
-        self.age = age
+        self.__age = age
 
     def set_phone(self, phone):
-        self.phone = phone
+        self.__phone = phone
 
     def get_name(self):
-        return self.name
+        return self.__name
 
     def get_address(self):
-        return self.address
+        return self.__address
 
     def get_age(self):
-        return self.age
+        return self.__age
 
     def get_phone(self):
-        return self.phone
+        return self.__phone
 
     def display(self):
         print(f"{self.get_name()}, age {self.get_age()}")
         print(f"{self.get_address()}")
-        print(f"{self.get_phone()}")
+        print(f"{self.get_phone()}\n")
+
 
 def main():
-    person1 = PersonalInfo()
-    
+    person1 = PersonalInfo('Brian Veitch', '1344 Fountain Green, Crystal Lake, IL', 38, '815-555-1234')
+    person2 = PersonalInfo('Casey Ann', '440 Lake Street, Crystal Lake, IL', 38, '815-555-5324')
+    person3 = PersonalInfo('Lance Valon', '3425 Farm Road, Sycamore, IL', 45, '815-555-3243')
+
+    person1.display()
+    person2.display()
+    person3.display()
+
+
+# Start =========
+main()
