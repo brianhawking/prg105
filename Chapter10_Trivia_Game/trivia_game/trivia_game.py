@@ -99,6 +99,9 @@ def main():
 
         if question.isCorrect(answer):
             players_score[current_player] += 1
+            print("Great job! You got it right.")
+        else:
+            print("Uh oh! That was not correct.")
 
         # switch player
         current_player = (current_player + 1) % 2
