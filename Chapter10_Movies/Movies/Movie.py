@@ -72,10 +72,14 @@ def main():
                 movie = Movie(title, release_year, story_year)
                 movies.append(movie)
 
+        # Create table header
         print("{:<36} {:<16} {:<16}".format('Title', 'Release Year', 'Story Year'))
+
+        # Loop through array and create row
         for movie in sorted(movies, key=lambda m: m.get_title()):
             movie.displayRow()
 
+    # called if the file cannot be opened
     except Exception:
         print("SOMETHING WENT WRONG WITH OPENING FILE")
 
