@@ -30,6 +30,13 @@ class ProductionWorker(Employee):
     def get_hourly_rate(self):
         return self.__hourly_rate
 
+    def get_shift_description(self):
+
+        if self.get_shift_number() == 1:
+            return "Day"
+        else:
+            return "Night"
+
     def set_hourly_rate(self, hourly_rate):
         self.__hourly_rate = hourly_rate
 

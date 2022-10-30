@@ -26,10 +26,11 @@ import Employee
 def main():
 
     # Get Employee's (specifically production worker) information
-    name = input("What is your name? ")
-    number = input("What is your employee number? ")
-    shift = int(input("What is your shift number? "))
-    hourly_rate = float(input("What is your hourly pay rate? "))
+    print("Enter Employee Information")
+    name = input("Name: ")
+    number = input("Employee Number: ")
+    shift = int(input("Shift (1 = day, 2 = night): "))
+    hourly_rate = float(input("Hourly pay rate:  "))
 
     # Instantiate worker
     production_worker = Employee.ProductionWorker(name, number, shift, hourly_rate)
@@ -37,12 +38,10 @@ def main():
     # Display to screen
     print("\nEmployee Information")
     print("-------------------------")
-    print(f"Employee Name: {production_worker.get_employee_name()}")
-    print(f"Employee Number: {production_worker.get_employee_number()}")
-    print(f"Shift Number: {production_worker.get_shift_number()}")
-    print(f"Hourly Rate: ${production_worker.get_hourly_rate():.2f}")
+    print(f"Employee: {production_worker.get_employee_number()} {production_worker.get_employee_name()}")
+    print(f"     Shift: {production_worker.get_shift_description()}")
+    print(f"     Pay Rate: ${production_worker.get_hourly_rate():.2f}")
 
 
 # ======= START =====
-
 main()
