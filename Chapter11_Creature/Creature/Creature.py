@@ -99,5 +99,3 @@ class OrcBoss(Orc):
         description = f"{self.__name} is an {self.type_of_creature} with {self.__special_move} as a special move.\n"
         description += Orc.__str__(self)
         return description
-
-
