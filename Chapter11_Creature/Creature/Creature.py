@@ -48,8 +48,11 @@ class Orc(Creature):
 
     def __init__(self, position, image, weapon, max_hit_points, current_hit_points):
         Creature.__init__(self, "Orc", False, position, image)
+        # Orc's weapon of choice
         self.__weapon = weapon
+        # the highest amount of health the orc can have
         self.__max_hit_points = max_hit_points
+        # the current amount of health the orc has
         self.__current_hit_points = current_hit_points
 
     def set_weapon(self, weapon):
@@ -80,7 +83,9 @@ class OrcBoss(Orc):
 
     def __init__(self, position, image, weapon, max_hit_points, current_hit_points, name, special_move):
         Orc.__init__(self, position, image, weapon, max_hit_points, current_hit_points)
+        # The Orc boss's name
         self.__name = name
+        # The orc boss's special move
         self.__special_move = special_move
 
     def set_name(self, name):
