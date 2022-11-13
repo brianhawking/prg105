@@ -29,7 +29,8 @@ def main():
         customer_data = pickle.load(input_file)
         input_file.close()
 
-    except Exception:
+    except (FileNotFoundError, IOError):
+        print("File not found. Adding a customer and quiting will create the file.")
         customer_data = {}
 
     print("Welcome to your email list manager.")
