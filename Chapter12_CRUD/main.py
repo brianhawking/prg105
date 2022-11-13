@@ -149,6 +149,7 @@ def save(customer_data):
     try:
         input_file = open(customer_file, 'wb')
         pickle.dump(customer_data, input_file)
+        print("The file has been updated with your changes.")
 
     except Exception:
         print(f"There was a problem saving to {customer_file}")
