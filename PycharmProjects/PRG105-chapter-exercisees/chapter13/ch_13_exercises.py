@@ -104,7 +104,8 @@ class MyGUI4:
     def __init__(self):
         self.main_window = tkinter.Tk()
 
-        self.button = tkinter.Button(self.main_window, text="What does a baby computer call his father? ", command=self.do_something)
+        self.button = tkinter.Button(self.main_window, text="What does a baby computer call his father? ",
+                                     command=self.do_something)
 
         self.button.pack()
 
@@ -119,6 +120,8 @@ class MyGUI4:
 
 # TODO 13.6 getting input / 13.7 Using Labels as output fields
 print("=" * 10, "Section 13.6-13.7 input and output using Entry and Label", "=" * 10)
+
+
 # Using the program in 13.10 kilo converter as a sample,
 # create a program to convert inches to centimeters
 
@@ -126,7 +129,6 @@ print("=" * 10, "Section 13.6-13.7 input and output using Entry and Label", "=" 
 class MyInchesConverter:
 
     def __init__(self):
-
         self.main_window = tkinter.Tk()
 
         self.top_frame = tkinter.Frame(self.main_window)
@@ -154,17 +156,16 @@ class MyInchesConverter:
 
         tkinter.mainloop()
 
-
     # convert function
     def convert(self):
-
         # get value from user
         inches = float(self.inches_entry.get())
 
         # convert to centimeters
         centimeters = inches * 2.54
 
-        tkinter.messagebox.showinfo("Results", str(inches) + ' inches is equal to ' + str(centimeters) +  ' centimeters.')
+        tkinter.messagebox.showinfo("Results",
+                                    str(inches) + ' inches is equal to ' + str(centimeters) + ' centimeters.')
 
 
 if __name__ == '__main__':
