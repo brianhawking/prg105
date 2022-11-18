@@ -71,8 +71,8 @@ def main():
 
                     print(f"Added {product}, {category}, and {supplier} to database")
 
-                except Exception:
-                    print("SQL Error encountered.")
+                except sqlite3.Error as error:
+                    print(error)
 
         coffee_cursor.execute("""
             SELECT count(*) FROM Coffee
@@ -81,8 +81,8 @@ def main():
         count = coffee_cursor.fetchone()
         print(f"{count[0]} rows have been added to the Coffee table.")
 
-    except Exception:
-        print("Something went wrong with opening coffeehouse_supplies.csv")
+    except IOError as error:
+        print(error)
 
 
 main()
