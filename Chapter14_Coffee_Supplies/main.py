@@ -36,6 +36,9 @@ def main():
         results = coffee_cursor.fetchall()
 
         for row in results:
+            # row[1] = product
+            # row[2] = category
+            # row[3] = supplier
             supply = Supply(row[1], row[2], row[3])
             if row[2] in coffee_supplies:
                 coffee_supplies[row[2]].append(supply)
