@@ -78,7 +78,7 @@ def main():
         print(f"{count[0]} rows have been added to the Coffee table.")
 
     except Exception:
-        print("Something went wrong with opening the file")
+        print("Something went wrong with opening coffeehouse_supplies.csv")
 
 
 main()
