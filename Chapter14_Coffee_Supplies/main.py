@@ -29,7 +29,7 @@ def main():
     try:
 
         # Begin reading db
-        select = """SELECT * FROM Coffee ORDER BY Category"""
+        select = """SELECT * FROM Coffee ORDER BY Category, Product"""
         coffee_cursor.execute(select)
 
         # get results
@@ -49,7 +49,7 @@ def main():
         # Iterate over supplies, display category, and then products for that category
         for category in coffee_supplies:
             print(category)
-            for item in sorted(coffee_supplies[category], key=lambda m: m.product):
+            for item in coffee_supplies[category]:
                 print("{:>8} {:<20} {:<12}".format('', item.product, item.supplier))
 
     except sqlite3.Error as error:
