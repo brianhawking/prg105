@@ -143,6 +143,7 @@ def delete(customer_data):
         print("No data found. Try adding a new entry")
 
 
+
 # Save dictionary to file
 def save(customer_data):
 
