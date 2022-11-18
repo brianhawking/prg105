@@ -84,5 +84,6 @@ def main():
     except IOError as error:
         print(error)
 
+    coffee_connection.close()
 
 main()
