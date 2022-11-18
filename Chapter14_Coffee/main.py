@@ -61,14 +61,18 @@ def main():
                 category = row[1]
                 supplier = row[2].rstrip('\n')
 
-                # insert into the coffee table
-                coffee_cursor.execute("""
-                        INSERT INTO Coffee (Product, Category, Supplier)
-                        VALUES (?, ?, ?)""", (product, category, supplier))
+                try:
+                    # insert into the coffee table
+                    coffee_cursor.execute("""
+                            INSERT INTO Coffee (Product, Category, Supplier)
+                            VALUES (?, ?, ?)""", (product, category, supplier))
 
-                coffee_connection.commit()
+                    coffee_connection.commit()
 
-                print(f"Added {product}, {category}, and {supplier} to database")
+                    print(f"Added {product}, {category}, and {supplier} to database")
+
+                except Exception:
+                    print("SQL Error encountered.")
 
         coffee_cursor.execute("""
             SELECT count(*) FROM Coffee
